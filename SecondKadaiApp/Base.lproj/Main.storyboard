@@ -36,6 +36,9 @@
                                 <rect key="frame" x="163.5" y="448.5" width="87" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="次の画面へ"/>
+                                <connections>
+                                    <segue destination="h50-YA-Nnp" kind="show" id="kA2-gi-wEh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -47,29 +50,35 @@
                             <constraint firstItem="era-8A-yjT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wST-Kd-kL7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NameField" destination="N08-eT-dK8" id="AoR-8f-u4z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-499" y="67"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="c5x-xc-sGI">
             <objects>
-                <viewController id="h50-YA-Nnp" sceneMemberID="viewController">
+                <viewController id="h50-YA-Nnp" customClass="ResultViewController" customModule="SecondKadaiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EnJ-zH-0Uz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんにちは、名前さん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjX-rh-96b">
-                                <rect key="frame" x="120" y="144" width="174" height="21"/>
+                                <rect key="frame" x="120" y="100" width="174" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyx-Ny-Y3c">
-                                <rect key="frame" x="146" y="445" width="122" height="33"/>
+                                <rect key="frame" x="146" y="401" width="122" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="前の画面に戻る"/>
+                                <connections>
+                                    <segue destination="9ba-JT-S9M" kind="unwind" unwindAction="unwind:" id="LuI-OP-1LE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="obV-li-rPP"/>
@@ -81,8 +90,13 @@
                             <constraint firstItem="zyx-Ny-Y3c" firstAttribute="centerX" secondItem="EnJ-zH-0Uz" secondAttribute="centerX" id="x1i-S5-7Mk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zuS-pJ-Jvi"/>
+                    <connections>
+                        <outlet property="NameLabel" destination="yjX-rh-96b" id="eJP-X3-UgV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jck-3A-q4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9ba-JT-S9M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="213" y="67"/>
         </scene>

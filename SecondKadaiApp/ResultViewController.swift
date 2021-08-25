@@ -9,12 +9,19 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    @IBOutlet weak var NameLabel: UILabel!
+    
+    var moji3: String = "syokichi3"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        NameLabel.text = "こんにちは、\(moji3)さん"
     }
     
+
 
     /*
     // MARK: - Navigation
